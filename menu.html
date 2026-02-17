@@ -5,58 +5,77 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Kigali Café Menu</h1>
-  
-  <div class="menu">
-    <h2>Drinks</h2>
-    <div class="menu-item">
-      <span>Espresso</span>
-      <span class="price">1000 RWF</span>
-    </div>
-    <div class="menu-item">
-      <span>Cappuccino</span>
-      <span class="price">1500 RWF</span>
-    </div>
-    <div class="menu-item">
-      <span>Rwandan Tea</span>
-      <span class="price">800 RWF</span>
-    </div>
+  <header>
+    <h1>Kigali Café</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+    </nav>
+  </header>
 
-    <h2>Snacks</h2>
-    <div class="menu-item">
-      <span>Mandazi</span>
-      <span class="price">500 RWF</span>
-    </div>
-    <div class="menu-item">
-      <span>Chapati</span>
-      <span class="price">700 RWF</span>
-    </div>
-    <div class="menu-item">
-      <span>Banana Cake</span>
-      <span class="price">1200 RWF</span>
-       <button onclick="orderCoffee()">Order Coffee</button>
-      <h2>Customer Feedback</h2> <form id="feedbackForm">
-        <label>Name:</label><br> <input type="text" id="name" required><br>
-        <br> <label>Email:</label><br> <input type="email" id="email" required><br>
-        <br> <label>Message:</label><br> <textarea id="message" required></textarea><br>
-        <br> <button type="submit">Submit Feedback</button> </form> </div>
-    </div>
-  </div>
-  </div> 
-  </div>
+  <main>
+    <section class="menu">
+      <h2>Drinks</h2>
+      <div class="menu-item">
+        <span>Espresso</span>
+        <span class="price">1000 RWF</span>
+      </div>
+      <div class="menu-item">
+        <span>Cappuccino</span>
+        <span class="price">1500 RWF</span>
+      </div>
+      <div class="menu-item">
+        <span>Rwandan Tea</span>
+        <span class="price">800 RWF</span>
+      </div>
 
-  <p style="text-align:center;">
-    <a href="index.html">Back to Home</a>
-  </p>
+      <h2>Snacks</h2>
+      <div class="menu-item">
+        <span>Mandazi</span>
+        <span class="price">500 RWF</span>
+      </div>
+      <div class="menu-item">
+        <span>Chapati</span>
+        <span class="price">700 RWF</span>
+      </div>
+      <div class="menu-item">
+        <span>Banana Cake</span>
+        <span class="price">1200 RWF</span>
+      </div>
+
+      <button onclick="orderCoffee()" class="btn">Order Coffee</button>
+    </section>
+
+    <section class="feedback">
+      <h2>Customer Feedback</h2>
+      <form id="feedbackForm">
+        <label>Name:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email" required><br><br>
+
+        <label>Message:</label><br>
+        <textarea id="message" required></textarea><br><br>
+
+        <button type="submit" class="btn">Submit Feedback</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kigali Café | Kagarama, Kigali City</p>
+  </footer>
+
   <script>
-  function orderCoffee() {
-    alert("Thank you for ordering coffee from Kigali Café!");
-  }
-    document.getElementById("feedbackForm").addEventListener("submit", function(event){
-      event.preventDefault(); // stop page reload
-      alert("Thank you, " + document.getElementById("name").value + "! Your feedback has been received."); });
-</script>
- 
+    function orderCoffee() {
+      alert("Thank you for ordering coffee from Kigali Café!");
+    }
 
+    document.getElementById("feedbackForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      alert("Thank you, " + document.getElementById("name").value + "! Your feedback has been received.");
+    });
+  </script>
 </body>
 </html>
