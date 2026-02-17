@@ -48,6 +48,26 @@
     alert("Thank you for ordering coffee from Kigali Café!");
   }
 </script>
+  <h2>Customer Feedback</h2>
+<form id="feedbackForm">
+  <label>Name:</label><br>
+  <input type="text" id="name" required><br><br>
+
+  <label>Email:</label><br>
+  <input type="email" id="email" required><br><br>
+
+  <label>Message:</label><br>
+  <textarea id="message" required></textarea><br><br>
+
+  <button type="submit">Submit Feedback</button>
+</form>
+
+<script>
+  document.getElementById("feedbackForm").addEventListener("submit", function(event){
+    event.preventDefault(); // stop page reload
+    alert("Thank you, " + document.getElementById("name").value + "! Your feedback has been received.");
+  });
+</script>
 
 </body>
 </html>
